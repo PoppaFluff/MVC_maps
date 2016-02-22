@@ -1,0 +1,208 @@
+﻿@model FYPTest.Models.testDB
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>testDB</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Forename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Forename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TownlandStreet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TownlandStreet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DED)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.County)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.County)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Birthplace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Birthplace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Literacy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Literacy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IrishLanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IrishLanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RelationToHeadOfHousehold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelationToHeadOfHousehold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecifiedIllness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecifiedIllness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Religion_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Religion_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Long)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Long)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressToGeoCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AddressToGeoCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HouseNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountInHouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountInHouse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OriginalCensusForm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OriginalCensusForm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationType)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

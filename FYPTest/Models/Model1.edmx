@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="msdb1740Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'msdb1740.dbo.testDB' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="testDB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Surname" Type="varchar" MaxLength="100" />
+          <Property Name="Forename" Type="varchar" MaxLength="100" />
+          <Property Name="TownlandStreet" Type="varchar" MaxLength="100" />
+          <Property Name="DED" Type="varchar" MaxLength="100" />
+          <Property Name="County" Type="varchar" MaxLength="100" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Sex" Type="varchar" MaxLength="100" />
+          <Property Name="Birthplace" Type="varchar" MaxLength="100" />
+          <Property Name="Occupation" Type="varchar" MaxLength="100" />
+          <Property Name="Religion" Type="varchar" MaxLength="100" />
+          <Property Name="Literacy" Type="varchar" MaxLength="100" />
+          <Property Name="IrishLanguage" Type="varchar" MaxLength="100" />
+          <Property Name="RelationToHeadOfHousehold" Type="varchar" MaxLength="100" />
+          <Property Name="MaritalStatus" Type="varchar" MaxLength="100" />
+          <Property Name="SpecifiedIllness" Type="varchar" MaxLength="100" />
+          <Property Name="Religion_ID" Type="int" />
+          <Property Name="Lat" Type="float" />
+          <Property Name="Long" Type="float" />
+          <Property Name="AddressToGeoCode" Type="varchar" MaxLength="100" />
+          <Property Name="HouseNo" Type="varchar" MaxLength="100" />
+          <Property Name="AmountInHouse" Type="int" />
+          <Property Name="OriginalCensusForm" Type="varchar" MaxLength="100" />
+          <Property Name="LocationType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="msdb1740ModelStoreContainer">
+          <EntitySet Name="testDB" EntityType="Self.testDB" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [testDB].[id] AS [id], 
+    [testDB].[Surname] AS [Surname], 
+    [testDB].[Forename] AS [Forename], 
+    [testDB].[TownlandStreet] AS [TownlandStreet], 
+    [testDB].[DED] AS [DED], 
+    [testDB].[County] AS [County], 
+    [testDB].[Age] AS [Age], 
+    [testDB].[Sex] AS [Sex], 
+    [testDB].[Birthplace] AS [Birthplace], 
+    [testDB].[Occupation] AS [Occupation], 
+    [testDB].[Religion] AS [Religion], 
+    [testDB].[Literacy] AS [Literacy], 
+    [testDB].[IrishLanguage] AS [IrishLanguage], 
+    [testDB].[RelationToHeadOfHousehold] AS [RelationToHeadOfHousehold], 
+    [testDB].[MaritalStatus] AS [MaritalStatus], 
+    [testDB].[SpecifiedIllness] AS [SpecifiedIllness], 
+    [testDB].[Religion_ID] AS [Religion_ID], 
+    [testDB].[Lat] AS [Lat], 
+    [testDB].[Long] AS [Long], 
+    [testDB].[AddressToGeoCode] AS [AddressToGeoCode], 
+    [testDB].[HouseNo] AS [HouseNo], 
+    [testDB].[AmountInHouse] AS [AmountInHouse], 
+    [testDB].[OriginalCensusForm] AS [OriginalCensusForm], 
+    [testDB].[LocationType] AS [LocationType]
+    FROM [dbo].[testDB] AS [testDB]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="msdb1740Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="testDB">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Surname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Forename" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TownlandStreet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DED" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="County" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Sex" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Birthplace" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Occupation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Religion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Literacy" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IrishLanguage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RelationToHeadOfHousehold" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SpecifiedIllness" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Religion_ID" Type="Int32" />
+          <Property Name="Lat" Type="Double" />
+          <Property Name="Long" Type="Double" />
+          <Property Name="AddressToGeoCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="HouseNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AmountInHouse" Type="Int32" />
+          <Property Name="OriginalCensusForm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LocationType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="msdb1740Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="testDBs" EntityType="Self.testDB" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="msdb1740ModelStoreContainer" CdmEntityContainer="msdb1740Entities">
+          <EntitySetMapping Name="testDBs">
+            <EntityTypeMapping TypeName="msdb1740Model.testDB">
+              <MappingFragment StoreEntitySet="testDB">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Forename" ColumnName="Forename" />
+                <ScalarProperty Name="TownlandStreet" ColumnName="TownlandStreet" />
+                <ScalarProperty Name="DED" ColumnName="DED" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birthplace" ColumnName="Birthplace" />
+                <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Literacy" ColumnName="Literacy" />
+                <ScalarProperty Name="IrishLanguage" ColumnName="IrishLanguage" />
+                <ScalarProperty Name="RelationToHeadOfHousehold" ColumnName="RelationToHeadOfHousehold" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="SpecifiedIllness" ColumnName="SpecifiedIllness" />
+                <ScalarProperty Name="Religion_ID" ColumnName="Religion_ID" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="AddressToGeoCode" ColumnName="AddressToGeoCode" />
+                <ScalarProperty Name="HouseNo" ColumnName="HouseNo" />
+                <ScalarProperty Name="AmountInHouse" ColumnName="AmountInHouse" />
+                <ScalarProperty Name="OriginalCensusForm" ColumnName="OriginalCensusForm" />
+                <ScalarProperty Name="LocationType" ColumnName="LocationType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

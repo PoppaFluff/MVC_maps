@@ -1,0 +1,168 @@
+﻿@model IEnumerable<FYPTest.Models.testDB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id="testDBtable" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Forename)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TownlandStreet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.County)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Birthplace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Occupation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Religion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Literacy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IrishLanguage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RelationToHeadOfHousehold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaritalStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecifiedIllness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Religion_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Long)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressToGeoCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HouseNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountInHouse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OriginalCensusForm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Forename)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TownlandStreet)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DED)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.County)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Birthplace)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Occupation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Religion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Literacy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IrishLanguage)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RelationToHeadOfHousehold)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaritalStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SpecifiedIllness)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Religion_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Long)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddressToGeoCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HouseNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AmountInHouse)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OriginalCensusForm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LocationType)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
