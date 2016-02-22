@@ -396,6 +396,7 @@
     <Content Include="Scripts\DataTables\dataTables.select.min.js" />
     <Content Include="Scripts\DataTables\jquery.dataTables.js" />
     <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTables\oms.min.js" />
     <Content Include="Scripts\DataTables\responsive.bootstrap.js" />
     <Content Include="Scripts\DataTables\responsive.bootstrap.min.js" />
     <Content Include="Scripts\DataTables\responsive.foundation.js" />
@@ -415,6 +416,7 @@
     <Content Include="Scripts\jszip.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\David.js" />
+    <Content Include="Scripts\oms.min.js" />
     <Content Include="Scripts\pdfmake\pdfmake.min.js" />
     <Content Include="Scripts\pdfmake\vfs_fonts.js" />
     <Content Include="Scripts\respond.js" />

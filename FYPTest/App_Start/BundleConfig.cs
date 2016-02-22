@@ -25,7 +25,8 @@ namespace FYPTest
                       "~/Scripts/jszip.js",
                       "~/Scripts/pdfmake/pdfmake.min.js",
                       "~/Scripts/pdfmake/vfs_fonts.js",
-                      "~/Scripts/David.js"));
+                      "~/Scripts/David.js",
+                      "~/Scripts/oms.min.js"));
             bundles.Add(new ScriptBundle("~/bundles/dataTablesJS").IncludeDirectory(
                      "~/Scripts/DataTables","*.js", true));
             bundles.Add(new ScriptBundle("~/bundles/dataTablesCSS").IncludeDirectory(

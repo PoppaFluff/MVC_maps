@@ -89,16 +89,15 @@ function PopulateMap() {
     // This makes the div with id "map_canvas" a google map
     var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     var n = document.getElementById("textSearch").value;
-    alert(n);
+    var oms = new OverlappingMarkerSpiderfier(map);
+    //alert(n);
     $.ajax({
         type: 'POST',
         url: '/Home/Drop',
         data: { name: n },
         success: function (data) {
-            alert("success!!!");
             var items = '';
             $.each(data, function (i, item) {
-                alert(item.Lat + "Bollocks");
                 var marker = new google.maps.Marker({
                     'position': new google.maps.LatLng(item.Lat, item.Long),
                     'map': map,
@@ -109,14 +108,21 @@ function PopulateMap() {
                 marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png')
 
                 // put in some information about each json object - in this case, the opening hours.
-                var infowindow = new google.maps.InfoWindow({
+                var iw = new google.maps.InfoWindow({
                     content: "<div><h2>" + item.RelationToHeadOfHousehold + "</h2>" + "<div><h4>Occupant: " + item.Forename + " " + item.Surname + "</h4></div></div>"
                 });
-
-                // finally hook up an "OnClick" listener to the map so it pops up out info-window when the marker-pin is clicked!
-                google.maps.event.addListener(marker, 'click', function () {
-                    infowindow.open(map, marker);
+                oms.addListener('click', function (marker, event) {
+                    iw.setContent(marker.desc);
+                    iw.open(map, marker);
                 });
+                oms.addListener('spiderfy', function (markers) {
+                    iw.close();
+                });
+                oms.addMarker(marker);
+                // finally hook up an "OnClick" listener to the map so it pops up out info-window when the marker-pin is clicked!
+                //google.maps.event.addListener(marker, 'click', function () {
+                //    infowindow.open(map, marker);
+                //});
             })
         }
     })
